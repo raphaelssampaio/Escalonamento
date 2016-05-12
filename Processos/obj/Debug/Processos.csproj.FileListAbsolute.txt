@@ -1,0 +1,9 @@
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\bin\Debug\Processos.exe.config
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\bin\Debug\Processos.exe
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\bin\Debug\Processos.pdb
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.csprojResolveAssemblyReference.cache
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.Properties.Resources.resources
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.csproj.GenerateResource.Cache
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.exe
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.pdb
+c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.EscalonamentoDeProcessos.resources
