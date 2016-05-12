@@ -7,3 +7,6 @@ c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\D
 c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.exe
 c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.pdb
 c:\users\raphael\documents\visual studio 2015\Projects\Processos\Processos\obj\Debug\Processos.EscalonamentoDeProcessos.resources
+C:\Users\Raphael\Desktop\Projeto Processos\Escalonamento\Processos\bin\Debug\Processos.exe.config
+C:\Users\Raphael\Desktop\Projeto Processos\Escalonamento\Processos\obj\Debug\Processos.exe
+C:\Users\Raphael\Desktop\Projeto Processos\Escalonamento\Processos\obj\Debug\Processos.pdb
