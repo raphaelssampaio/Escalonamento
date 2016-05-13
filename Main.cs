@@ -27,6 +27,7 @@ namespace Processos
 
             // Inicializa com o primeiro item do combobox selecionado
             cbxProcessos.SelectedIndex = 0;
+            gbxPrioridade.Enabled = false;
             
         }
 
@@ -145,11 +146,96 @@ namespace Processos
         private void btnCalcular_Click(object sender, EventArgs e)
         {
 
+            if (cbxProcessos.SelectedItem.ToString() == "FIFO")
+            {
+                Fifo f = new Fifo(Convert.ToDouble(tbxP1.Text), Convert.ToDouble(tbxP2.Text), Convert.ToDouble(tbxP3.Text), Convert.ToDouble(tbxP4.Text));
+                // Tempo de espera
+                tbxEsperaP1.Text = Convert.ToString(f.GuardarTempoEspera(1));
+                tbxEsperaP1.Enabled = false;
+                tbxEsperaP2.Text = Convert.ToString(f.GuardarTempoEspera(2));
+                tbxEsperaP2.Enabled = false;
+                tbxEsperaP3.Text = Convert.ToString(f.GuardarTempoEspera(3));
+                tbxEsperaP3.Enabled = false;
+                tbxEsperaP4.Text = Convert.ToString(f.GuardarTempoEspera(4));
+                tbxEsperaP4.Enabled = false;
+
+                // Tempo de chegada
+                tbxChegadaP1.Text = "0";
+                tbxChegadaP1.Enabled = false;
+                tbxChegadaP2.Text = "0";
+                tbxChegadaP2.Enabled = false;
+                tbxChegadaP3.Text = "0";
+                tbxChegadaP3.Enabled = false;
+                tbxChegadaP4.Text = "0";
+                tbxChegadaP4.Enabled = false;
+
+                lbTempoMedioEspera.Text += " = "+ Convert.ToString(f.EscalonaEspera());
+                lbTempoTurnAroundMedio.Text += " = " + Convert.ToString(f.EscalonaTurnAround());
+                
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void chkbxPrioridade_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbxPrioridade.Checked)
+            {
+                gbxPrioridade.Enabled = true;
+            }
+            else
+            {
+                gbxPrioridade.Enabled = false;
+            }
         }
     }
 }
