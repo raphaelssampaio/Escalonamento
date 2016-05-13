@@ -114,6 +114,21 @@ namespace Processos
 
         }
 
- 
+        private void chkbxQuantum_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbxQuantum.Checked)
+            { 
+                tbxQuantum.Enabled = true;
+            }
+            else
+            {
+                tbxQuantum.Enabled = false;
+            }
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
