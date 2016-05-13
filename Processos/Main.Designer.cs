@@ -29,9 +29,25 @@
         private void InitializeComponent()
         {
             this.pProcessos = new System.Windows.Forms.Panel();
+            this.tbxQuantum = new System.Windows.Forms.TextBox();
+            this.chkbxQuantum = new System.Windows.Forms.CheckBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.gbxProcessos = new System.Windows.Forms.GroupBox();
+            this.tbxEsperaP4 = new System.Windows.Forms.TextBox();
+            this.lbTempoEsperaP4 = new System.Windows.Forms.Label();
+            this.tbxEsperaP3 = new System.Windows.Forms.TextBox();
+            this.lbTempoEsperaP3 = new System.Windows.Forms.Label();
+            this.tbxEsperaP2 = new System.Windows.Forms.TextBox();
+            this.lbTempoEsperaP2 = new System.Windows.Forms.Label();
+            this.tbxEsperaP1 = new System.Windows.Forms.TextBox();
+            this.lbTempoEsperaP1 = new System.Windows.Forms.Label();
+            this.lbTempoTurnAroundMedio = new System.Windows.Forms.Label();
+            this.lbTempoMedioEspera = new System.Windows.Forms.Label();
+            this.tbxChegadaP4 = new System.Windows.Forms.TextBox();
+            this.tbxChegadaP3 = new System.Windows.Forms.TextBox();
+            this.tbxChegadaP2 = new System.Windows.Forms.TextBox();
+            this.tbxChegadaP1 = new System.Windows.Forms.TextBox();
             this.lbChegadaP4 = new System.Windows.Forms.Label();
             this.lbChegadaP3 = new System.Windows.Forms.Label();
             this.lbChegadaP2 = new System.Windows.Forms.Label();
@@ -50,10 +66,7 @@
             this.lbP1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxProcessos = new System.Windows.Forms.ComboBox();
-            this.tbxChegadaP1 = new System.Windows.Forms.TextBox();
-            this.tbxChegadaP2 = new System.Windows.Forms.TextBox();
-            this.tbxChegadaP3 = new System.Windows.Forms.TextBox();
-            this.tbxChegadaP4 = new System.Windows.Forms.TextBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.pProcessos.SuspendLayout();
             this.gbxProcessos.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +74,9 @@
             // pProcessos
             // 
             this.pProcessos.BackColor = System.Drawing.Color.GhostWhite;
+            this.pProcessos.Controls.Add(this.btnCalcular);
+            this.pProcessos.Controls.Add(this.tbxQuantum);
+            this.pProcessos.Controls.Add(this.chkbxQuantum);
             this.pProcessos.Controls.Add(this.btnExcluir);
             this.pProcessos.Controls.Add(this.btnNovo);
             this.pProcessos.Controls.Add(this.gbxProcessos);
@@ -69,14 +85,33 @@
             this.pProcessos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pProcessos.Location = new System.Drawing.Point(0, 0);
             this.pProcessos.Name = "pProcessos";
-            this.pProcessos.Size = new System.Drawing.Size(466, 308);
+            this.pProcessos.Size = new System.Drawing.Size(555, 308);
             this.pProcessos.TabIndex = 2;
+            // 
+            // tbxQuantum
+            // 
+            this.tbxQuantum.Enabled = false;
+            this.tbxQuantum.Location = new System.Drawing.Point(341, 32);
+            this.tbxQuantum.Name = "tbxQuantum";
+            this.tbxQuantum.Size = new System.Drawing.Size(37, 20);
+            this.tbxQuantum.TabIndex = 8;
+            // 
+            // chkbxQuantum
+            // 
+            this.chkbxQuantum.AutoSize = true;
+            this.chkbxQuantum.Location = new System.Drawing.Point(276, 35);
+            this.chkbxQuantum.Name = "chkbxQuantum";
+            this.chkbxQuantum.Size = new System.Drawing.Size(69, 17);
+            this.chkbxQuantum.TabIndex = 7;
+            this.chkbxQuantum.Text = "Quantum";
+            this.chkbxQuantum.UseVisualStyleBackColor = true;
+            this.chkbxQuantum.CheckedChanged += new System.EventHandler(this.chkbxQuantum_CheckedChanged);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(381, 110);
+            this.btnExcluir.Location = new System.Drawing.Point(470, 110);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(74, 30);
+            this.btnExcluir.Size = new System.Drawing.Size(73, 30);
             this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -84,9 +119,9 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(381, 74);
+            this.btnNovo.Location = new System.Drawing.Point(470, 74);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(74, 30);
+            this.btnNovo.Size = new System.Drawing.Size(73, 30);
             this.btnNovo.TabIndex = 5;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
@@ -94,6 +129,16 @@
             // 
             // gbxProcessos
             // 
+            this.gbxProcessos.Controls.Add(this.tbxEsperaP4);
+            this.gbxProcessos.Controls.Add(this.lbTempoEsperaP4);
+            this.gbxProcessos.Controls.Add(this.tbxEsperaP3);
+            this.gbxProcessos.Controls.Add(this.lbTempoEsperaP3);
+            this.gbxProcessos.Controls.Add(this.tbxEsperaP2);
+            this.gbxProcessos.Controls.Add(this.lbTempoEsperaP2);
+            this.gbxProcessos.Controls.Add(this.tbxEsperaP1);
+            this.gbxProcessos.Controls.Add(this.lbTempoEsperaP1);
+            this.gbxProcessos.Controls.Add(this.lbTempoTurnAroundMedio);
+            this.gbxProcessos.Controls.Add(this.lbTempoMedioEspera);
             this.gbxProcessos.Controls.Add(this.tbxChegadaP4);
             this.gbxProcessos.Controls.Add(this.tbxChegadaP3);
             this.gbxProcessos.Controls.Add(this.tbxChegadaP2);
@@ -116,10 +161,131 @@
             this.gbxProcessos.Controls.Add(this.lbP1);
             this.gbxProcessos.Location = new System.Drawing.Point(21, 68);
             this.gbxProcessos.Name = "gbxProcessos";
-            this.gbxProcessos.Size = new System.Drawing.Size(357, 237);
+            this.gbxProcessos.Size = new System.Drawing.Size(443, 237);
             this.gbxProcessos.TabIndex = 4;
             this.gbxProcessos.TabStop = false;
-
+            // 
+            // tbxEsperaP4
+            // 
+            this.tbxEsperaP4.Location = new System.Drawing.Point(358, 122);
+            this.tbxEsperaP4.Name = "tbxEsperaP4";
+            this.tbxEsperaP4.Size = new System.Drawing.Size(60, 20);
+            this.tbxEsperaP4.TabIndex = 29;
+            this.tbxEsperaP4.Visible = false;
+            // 
+            // lbTempoEsperaP4
+            // 
+            this.lbTempoEsperaP4.AutoSize = true;
+            this.lbTempoEsperaP4.Location = new System.Drawing.Point(262, 127);
+            this.lbTempoEsperaP4.Name = "lbTempoEsperaP4";
+            this.lbTempoEsperaP4.Size = new System.Drawing.Size(90, 13);
+            this.lbTempoEsperaP4.TabIndex = 28;
+            this.lbTempoEsperaP4.Text = "Tempo de espera";
+            this.lbTempoEsperaP4.Visible = false;
+            // 
+            // tbxEsperaP3
+            // 
+            this.tbxEsperaP3.Location = new System.Drawing.Point(358, 87);
+            this.tbxEsperaP3.Name = "tbxEsperaP3";
+            this.tbxEsperaP3.Size = new System.Drawing.Size(60, 20);
+            this.tbxEsperaP3.TabIndex = 27;
+            this.tbxEsperaP3.Visible = false;
+            // 
+            // lbTempoEsperaP3
+            // 
+            this.lbTempoEsperaP3.AutoSize = true;
+            this.lbTempoEsperaP3.Location = new System.Drawing.Point(262, 92);
+            this.lbTempoEsperaP3.Name = "lbTempoEsperaP3";
+            this.lbTempoEsperaP3.Size = new System.Drawing.Size(90, 13);
+            this.lbTempoEsperaP3.TabIndex = 26;
+            this.lbTempoEsperaP3.Text = "Tempo de espera";
+            this.lbTempoEsperaP3.Visible = false;
+            // 
+            // tbxEsperaP2
+            // 
+            this.tbxEsperaP2.Location = new System.Drawing.Point(358, 52);
+            this.tbxEsperaP2.Name = "tbxEsperaP2";
+            this.tbxEsperaP2.Size = new System.Drawing.Size(60, 20);
+            this.tbxEsperaP2.TabIndex = 25;
+            this.tbxEsperaP2.Visible = false;
+            // 
+            // lbTempoEsperaP2
+            // 
+            this.lbTempoEsperaP2.AutoSize = true;
+            this.lbTempoEsperaP2.Location = new System.Drawing.Point(262, 57);
+            this.lbTempoEsperaP2.Name = "lbTempoEsperaP2";
+            this.lbTempoEsperaP2.Size = new System.Drawing.Size(90, 13);
+            this.lbTempoEsperaP2.TabIndex = 24;
+            this.lbTempoEsperaP2.Text = "Tempo de espera";
+            this.lbTempoEsperaP2.Visible = false;
+            // 
+            // tbxEsperaP1
+            // 
+            this.tbxEsperaP1.Location = new System.Drawing.Point(358, 17);
+            this.tbxEsperaP1.Name = "tbxEsperaP1";
+            this.tbxEsperaP1.Size = new System.Drawing.Size(60, 20);
+            this.tbxEsperaP1.TabIndex = 23;
+            this.tbxEsperaP1.Visible = false;
+            // 
+            // lbTempoEsperaP1
+            // 
+            this.lbTempoEsperaP1.AutoSize = true;
+            this.lbTempoEsperaP1.Location = new System.Drawing.Point(262, 22);
+            this.lbTempoEsperaP1.Name = "lbTempoEsperaP1";
+            this.lbTempoEsperaP1.Size = new System.Drawing.Size(90, 13);
+            this.lbTempoEsperaP1.TabIndex = 22;
+            this.lbTempoEsperaP1.Text = "Tempo de espera";
+            this.lbTempoEsperaP1.Visible = false;
+            // 
+            // lbTempoTurnAroundMedio
+            // 
+            this.lbTempoTurnAroundMedio.AutoSize = true;
+            this.lbTempoTurnAroundMedio.Location = new System.Drawing.Point(242, 184);
+            this.lbTempoTurnAroundMedio.Name = "lbTempoTurnAroundMedio";
+            this.lbTempoTurnAroundMedio.Size = new System.Drawing.Size(140, 13);
+            this.lbTempoTurnAroundMedio.TabIndex = 21;
+            this.lbTempoTurnAroundMedio.Text = "Tempo de turnaround médio";
+            // 
+            // lbTempoMedioEspera
+            // 
+            this.lbTempoMedioEspera.AutoSize = true;
+            this.lbTempoMedioEspera.Location = new System.Drawing.Point(23, 184);
+            this.lbTempoMedioEspera.Name = "lbTempoMedioEspera";
+            this.lbTempoMedioEspera.Size = new System.Drawing.Size(121, 13);
+            this.lbTempoMedioEspera.TabIndex = 20;
+            this.lbTempoMedioEspera.Text = "Tempo de espera médio";
+            // 
+            // tbxChegadaP4
+            // 
+            this.tbxChegadaP4.Location = new System.Drawing.Point(196, 122);
+            this.tbxChegadaP4.Name = "tbxChegadaP4";
+            this.tbxChegadaP4.Size = new System.Drawing.Size(60, 20);
+            this.tbxChegadaP4.TabIndex = 19;
+            this.tbxChegadaP4.Visible = false;
+            // 
+            // tbxChegadaP3
+            // 
+            this.tbxChegadaP3.Location = new System.Drawing.Point(196, 87);
+            this.tbxChegadaP3.Name = "tbxChegadaP3";
+            this.tbxChegadaP3.Size = new System.Drawing.Size(60, 20);
+            this.tbxChegadaP3.TabIndex = 18;
+            this.tbxChegadaP3.Visible = false;
+            // 
+            // tbxChegadaP2
+            // 
+            this.tbxChegadaP2.Location = new System.Drawing.Point(196, 52);
+            this.tbxChegadaP2.Name = "tbxChegadaP2";
+            this.tbxChegadaP2.Size = new System.Drawing.Size(60, 20);
+            this.tbxChegadaP2.TabIndex = 17;
+            this.tbxChegadaP2.Visible = false;
+            // 
+            // tbxChegadaP1
+            // 
+            this.tbxChegadaP1.Location = new System.Drawing.Point(196, 17);
+            this.tbxChegadaP1.Name = "tbxChegadaP1";
+            this.tbxChegadaP1.Size = new System.Drawing.Size(60, 20);
+            this.tbxChegadaP1.TabIndex = 16;
+            this.tbxChegadaP1.Visible = false;
             // 
             // lbChegadaP4
             // 
@@ -297,46 +463,23 @@
             this.cbxProcessos.Size = new System.Drawing.Size(121, 21);
             this.cbxProcessos.TabIndex = 2;
             // 
-            // tbxChegadaP1
+            // btnCalcular
             // 
-            this.tbxChegadaP1.Location = new System.Drawing.Point(196, 17);
-            this.tbxChegadaP1.Name = "tbxChegadaP1";
-            this.tbxChegadaP1.Size = new System.Drawing.Size(60, 20);
-            this.tbxChegadaP1.TabIndex = 16;
-            this.tbxChegadaP1.Visible = false;
-
-            // 
-            // tbxChegadaP2
-            // 
-            this.tbxChegadaP2.Location = new System.Drawing.Point(196, 52);
-            this.tbxChegadaP2.Name = "tbxChegadaP2";
-            this.tbxChegadaP2.Size = new System.Drawing.Size(60, 20);
-            this.tbxChegadaP2.TabIndex = 17;
-            this.tbxChegadaP2.Visible = false;
-            // 
-            // tbxChegadaP3
-            // 
-            this.tbxChegadaP3.Location = new System.Drawing.Point(196, 87);
-            this.tbxChegadaP3.Name = "tbxChegadaP3";
-            this.tbxChegadaP3.Size = new System.Drawing.Size(60, 20);
-            this.tbxChegadaP3.TabIndex = 18;
-            this.tbxChegadaP3.Visible = false;
-
-            // 
-            // tbxChegadaP4
-            // 
-            this.tbxChegadaP4.Location = new System.Drawing.Point(196, 122);
-            this.tbxChegadaP4.Name = "tbxChegadaP4";
-            this.tbxChegadaP4.Size = new System.Drawing.Size(60, 20);
-            this.tbxChegadaP4.TabIndex = 19;
-            this.tbxChegadaP4.Visible = false;
+            this.btnCalcular.Location = new System.Drawing.Point(470, 206);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(73, 30);
+            this.btnCalcular.TabIndex = 9;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // EscalonamentoDeProcessos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 308);
+            this.ClientSize = new System.Drawing.Size(555, 308);
             this.Controls.Add(this.pProcessos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EscalonamentoDeProcessos";
             this.Text = "Escalonamento de Processos";
             this.pProcessos.ResumeLayout(false);
@@ -374,6 +517,19 @@
         private System.Windows.Forms.TextBox tbxChegadaP2;
         private System.Windows.Forms.TextBox tbxChegadaP1;
         private System.Windows.Forms.TextBox tbxChegadaP4;
+        private System.Windows.Forms.TextBox tbxQuantum;
+        private System.Windows.Forms.CheckBox chkbxQuantum;
+        private System.Windows.Forms.Label lbTempoEsperaP1;
+        private System.Windows.Forms.Label lbTempoTurnAroundMedio;
+        private System.Windows.Forms.Label lbTempoMedioEspera;
+        private System.Windows.Forms.TextBox tbxEsperaP1;
+        private System.Windows.Forms.TextBox tbxEsperaP4;
+        private System.Windows.Forms.Label lbTempoEsperaP4;
+        private System.Windows.Forms.Label lbTempoEsperaP3;
+        private System.Windows.Forms.TextBox tbxEsperaP2;
+        private System.Windows.Forms.Label lbTempoEsperaP2;
+        private System.Windows.Forms.TextBox tbxEsperaP3;
+        private System.Windows.Forms.Button btnCalcular;
     }
 }
 

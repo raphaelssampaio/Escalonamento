@@ -18,13 +18,6 @@ namespace Processos
         private int tempoTurnAround;
         private double tempoTurnAroundMedio;
 
-        // Construtor
-
-        public ClasseProcessos(String nomeProcesso) {
-            this.nomeProcesso = nomeProcesso;
-        }
-
-         // Gets e Sets
         public int OrdemChegada
         {
             get
@@ -37,6 +30,7 @@ namespace Processos
                 ordemChegada = value;
             }
         }
+
         public string NomeProcesso
         {
             get
@@ -49,6 +43,7 @@ namespace Processos
                 nomeProcesso = value;
             }
         }
+
         public int TempoEspera
         {
             get
@@ -61,6 +56,7 @@ namespace Processos
                 tempoEspera = value;
             }
         }
+
         public int TempoExecucao
         {
             get
@@ -73,6 +69,7 @@ namespace Processos
                 tempoExecucao = value;
             }
         }
+
         public double TempoEsperaMedio
         {
             get
@@ -85,6 +82,7 @@ namespace Processos
                 tempoEsperaMedio = value;
             }
         }
+
         public int TempoTurnAround
         {
             get
@@ -97,6 +95,7 @@ namespace Processos
                 tempoTurnAround = value;
             }
         }
+
         public double TempoTurnAroundMedio
         {
             get
@@ -109,6 +108,14 @@ namespace Processos
                 tempoTurnAroundMedio = value;
             }
         }
+
+        // Construtor
+
+        public ClasseProcessos(String nomeProcesso) {
+            this.nomeProcesso = nomeProcesso;
+        }
+
+
 
        
     }
