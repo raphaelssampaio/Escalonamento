@@ -39,6 +39,8 @@ namespace Processos
                 tbxP1.Visible = true;
                 lbChegadaP1.Visible = true;
                 tbxChegadaP1.Visible = true;
+                lbTempoEsperaP1.Visible = true;
+                tbxEsperaP1.Visible = true;
                 contador++;
                 p1 = new ClasseProcessos("P1");    
             }
@@ -48,6 +50,8 @@ namespace Processos
                 tbxP2.Visible = true;
                 lbChegadaP2.Visible = true;
                 tbxChegadaP2.Visible = true;
+                lbTempoEsperaP2.Visible = true;
+                tbxEsperaP2.Visible = true;
                 contador++;
                 p2 = new ClasseProcessos("P2");
             }
@@ -57,6 +61,8 @@ namespace Processos
                 tbxP3.Visible = true;
                 lbChegadaP3.Visible = true;
                 tbxChegadaP3.Visible = true;
+                lbTempoEsperaP3.Visible = true;
+                tbxEsperaP3.Visible = true;
                 contador++;
                 p3 = new ClasseProcessos("P3");
             }
@@ -66,6 +72,8 @@ namespace Processos
                 tbxP4.Visible = true;
                 lbChegadaP4.Visible = true;
                 tbxChegadaP4.Visible = true;
+                lbTempoEsperaP4.Visible = true;
+                tbxEsperaP4.Visible = true;
                 contador++;
                 p4 = new ClasseProcessos("P4");
             }
@@ -83,6 +91,8 @@ namespace Processos
                 tbxP4.Visible = false;
                 lbChegadaP4.Visible = false;
                 tbxChegadaP4.Visible = false;
+                lbTempoEsperaP4.Visible = false;
+                tbxEsperaP4.Visible = false;
                 contador--;
             } else if(contador == 3)
             {
@@ -90,6 +100,8 @@ namespace Processos
                 tbxP3.Visible = false;
                 lbChegadaP3.Visible = false;
                 tbxChegadaP3.Visible = false;
+                lbTempoEsperaP3.Visible = false;
+                tbxEsperaP3.Visible = false;
                 contador--;
             }
             else if (contador == 2)
@@ -98,6 +110,8 @@ namespace Processos
                 tbxP2.Visible = false;
                 lbChegadaP2.Visible = false;
                 tbxChegadaP2.Visible = false;
+                lbTempoEsperaP2.Visible = false;
+                tbxEsperaP2.Visible = false;
                 contador--;
             }
             else if (contador == 1)
@@ -106,6 +120,8 @@ namespace Processos
                 tbxP1.Visible = false;
                 lbChegadaP1.Visible = false;
                 tbxChegadaP1.Visible = false;
+                lbTempoEsperaP1.Visible = false;
+                tbxEsperaP1.Visible = false;
                 contador--;
             }else
             {
@@ -129,6 +145,11 @@ namespace Processos
         private void btnCalcular_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
